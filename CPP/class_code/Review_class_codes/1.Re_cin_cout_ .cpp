@@ -2,8 +2,8 @@
 // input ouput stream
 //  输入输出流
 
-using namespace std;
 
+using namespace std;
 // int main() 
 // {
 //     //cou 输出的类似 printf
@@ -59,3 +59,29 @@ using namespace std;
 //     cout << (char)ch << "xxxxx" <<endl;
 //     return 0;
 // }
+
+#include <iostream> 
+#include <cstdio>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    int cnt = 0;
+    for(int i =1 ;i<512;i++)
+    {
+        int n = i;
+        while(n)
+        {
+            if(n%10 == 5)
+            {
+                cnt++;
+                break;
+            }
+            n /= 10;
+        }
+    }
+    cout << "从1 到 512 中含5 的数字的个数是:" << cnt << endl;
+}
+
+
