@@ -322,3 +322,117 @@ using namespace std;
 //     cout << x << endl;
 //     return 0;
 // }
+
+
+// //substr函数，截取一段 string 的字符串，从指定位置开始截取，截取指定个数的字符串
+// //      string substr(size_t pos,size_t len)返回的是 string 类型的字符串，所以用 string 类型的字符串来接受
+// int main()
+// {
+//     string s1 = "i love u,but i control no you";
+//     string s2 = "control no you";
+//     //用 find函数找到目标字符串的下标
+//     size_t n = s1.find(s2,4);
+//     cout << n <<endl;
+//     //用 substr 函数来截取目标字符串
+//     string s3  = s1.substr(n);
+//     //直接打印字符串
+//     cout << s3 <<endl;
+//     //用下标方式打印，一个一个字符打印
+//     for(int i = 0;i<s3.size();i++)
+//     {
+//         cout << s3[i];
+//     }
+//     cout << endl;
+//     //用迭代器打印
+//     for(string::iterator it = s3.begin();it < s3.end();++it)
+//     {
+//         cout << *it ;
+//     }
+//     cout << endl;
+//     return 0;
+// }
+
+
+//字符串的比较，可以直接比较，不用 C 语言的 strcmp 函数来比较,直接用逻辑运算来比较
+//比较的是对应字符的 ASIC 码值
+// int main()
+// {
+//     string s1 = "abcdx";
+//     string s2 = "xxx";
+//     if(s2 > s1)
+//     cout << ">" << endl;
+//     else 
+//     cout << "<=" << endl;
+//     return 0;
+// }
+
+
+//stoi  stol 这两函数不是成员函数所以在用时，不用.访问，而是直接传参
+//      int stoi(string & s,size_t *pos,size_t num )
+//      long stol(string & s ,size_t *pos,size_t num)
+//  这个函数会将字符串里第一个无法正确匹配的数字字符之前的数字提取并且转化成 10 进制
+//  返回类型是整形，第一个参数是要提取的字符串，第二个是一个指针，函数会返回第一个无法正确匹配的字符的下标位置给这个指针，第三个参数是字符串里的数字进制
+
+// int main()
+// {
+//     string s = "0x11woaini33";
+//     size_t pos = 0;
+//     //当不需要第一个无法匹配的字符下标时，也可以直接传一个空指针，NULL 或者 0
+//     int n = stoi(s,0,0);
+//     //当最后一个参数是 0 时，会自动读取字符串里数字的进制，如果是0 开头的就是八进制，如果是 0x 开头的就是 16进制
+//     cout << n <<endl;
+//     cout << pos <<endl;
+//     return 0;
+//}
+// int main()
+// {
+//     string s = "11woaini33";
+//     size_t pos = 0;
+//     int n = stoi(s,&pos,2);
+//     cout << n <<endl;
+//     cout << pos <<endl;
+//     return 0;
+// }
+// int main()
+// {
+//     string s = "11woaini33";
+//     size_t pos = 0;
+//     int n = stoi(s,&pos);
+//     cout << n <<endl;
+//     cout << pos <<endl;
+//     return 0;
+// }
+
+
+//stof  stod    提取一个字符串里的小数，与整数形式相同，只是没有最后一个参数
+//          double stod(string & s,size_t * pos);
+// int main()
+// {
+//     string s = "3.14xx88";
+//     size_t pos = 0;
+//     double x = stod(s,&pos);
+//     cout << x <<endl;
+//     cout << pos <<endl;
+//     return 0;
+// }
+
+
+//to_string         是讲数字转换成字符串的一个函数
+//  string to_string(int n);
+// int main()
+// {
+//     float n  = 3.1415926;
+//     string s = "pi is " +to_string(n);
+//     cout << s <<endl;
+//     for(int i = 0;i<s.size();++i)
+//     {
+//         cout << s[i];
+//     }
+//     cout <<endl;
+//     for(string::iterator it = s.begin();it < s.end();++it)
+//     {
+//         cout << *it;
+//     }
+//     cout <<endl;
+//     return 0;
+// }
