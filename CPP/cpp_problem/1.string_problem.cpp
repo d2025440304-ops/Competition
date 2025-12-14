@@ -1,6 +1,7 @@
-//标题统计
+// 标题统计
 // #include <iostream>
 // #include <string>
+// #include <cctype>
 // using namespace std;
 // int main()
 // {
@@ -17,12 +18,13 @@
 //     cout << cnt <<endl;
 //     return 0;
 // }
+//isspace()
 //法二
 //用cin 读取，只统计 cin 读取的数据
 // int main()
 // {
 //     string s;
-//     size_t cnt = 0;
+//     size_t cnt = 0;1
 //     while(cin >> s)
 //     {
 //         cnt += s.size();
@@ -33,30 +35,34 @@
 
 
 //剪刀石头布
-#include <iostream>
-#include <string>
-using namespace std;
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    string s1,s2;
-    int n = 0; 
-    cin >> n ;
-    //n次循环
-    while(n--)
-    {
-        cin >> s1>> s2;
-        if(s1 == s2)
-            cout << "Tie" <<endl;
-        else if(s1 == "Rock" && s2 == "Scissors")
-            cout << "Player1"<<endl;
-        else if(s1 == "Scissors" && s2 == "Paper")
-            cout << "Player1"<<endl;
-        else if (s1 == "Paper" && s2 == "Rock")
-            cout << "Player1" <<endl;
-        else 
-            cout <<"Player2" <<endl;
-    }
-    return 0;
-}
+// #include <iostream>
+// #include <string>
+// using namespace std;
+// int main()
+// {
+//     ios_base::sync_with_stdio(false);
+//     cin.tie(0);
+//     string s1,s2;
+//     int n = 0; 
+//     cin >> n ;
+//     //n次循环
+//     while(n--)
+//     {
+//         cin >> s1>> s2;
+//         if(s1 == s2)
+//             cout << "Tie" <<endl;
+//         else if(s1 == "Rock" && s2 == "Scissors")
+//             cout << "Player1"<<endl;
+//         else if(s1 == "Scissors" && s2 == "Paper")
+//             cout << "Player1"<<endl;
+//         else if (s1 == "Paper" && s2 == "Rock")
+//             cout << "Player1" <<endl;
+//         else 
+//             cout <<"Player2" <<endl;
+//     }
+//     return 0;
+// }
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <cctype>
