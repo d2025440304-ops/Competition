@@ -62,7 +62,14 @@
 //     }
 //     return 0;
 // }
-#include <stdio.h>
-#include <stdbool.h>
-#include <stdlib.h>
-#include <cctype>
+// #include <iostream>
+// #include <string>
+// using namespace std;
+// int main()
+// {
+//     ios_base::sync_with_stdio(0);
+//     cin.tie(0);
+//     string s ;
+//     cin>> s ;
+//     cout << s << endl;
+// }
