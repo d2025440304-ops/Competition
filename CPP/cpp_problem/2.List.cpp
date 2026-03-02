@@ -3,7 +3,6 @@
 using namespace std;
 int main()
 {
-    //创建双向链表
     list<int> lt;
     //尾插
     lt.push_back(0);
