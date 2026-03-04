@@ -25,3 +25,28 @@ int main()
     }
     return 0;
 }
+
+
+// int mian()
+// {
+//     ios::sync_with_stdio(false);
+//     cin.tie(0);
+//     int op,i,j,k;
+//     cin >> n >> q;
+//     while(q--)
+//     {
+//         cin >> op >>i >>j;
+//         if(op==1)
+//         {
+//             cin >> k;
+//             if(a[i].size() <= j)
+//             {
+//                 a[i].resize(j+1);
+//             }
+//             a[i][j] = k;
+//         }else{
+//             cout << a[i][j] <<endl;
+//         }
+//     }
+//     return 0;
+// }
