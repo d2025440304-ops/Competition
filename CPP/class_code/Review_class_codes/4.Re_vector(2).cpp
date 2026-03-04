@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 const int N = 10;
 //类
@@ -11,7 +12,7 @@ class X {
 };
 void print(vector<int> & a)//打印容器引用性能更好，引用是直接调用，而不应用要拷贝，性能低，参数里的容器是泛型的
 {
-    for(int i = 1;i<a.size();i++)
+    for(int i = 0;i<a.size();i++)
     {
         cout << a[i] << " ";
     }
@@ -49,13 +50,21 @@ int main()
     print(aa);
     //扩大成 10
     aa.resize(10);
-    print(aa);
-    //缩小成 3
-    aa.resize(3);
-    print(aa);
+    // print(aa);
+    // //缩小成 3
+    // aa.resize(3);
+    // print(aa);
 
-    //.clear 清空容器，容器内部为空，没有元素
-    aa.clear();
-    cout << aa.size() << endl;
+    // //.clear 清空容器，容器内部为空，没有元素
+    // aa.clear();
+    // cout << aa.size() << endl;
+
+    //利用迭代器来 sort
+    //升序,从小到大
+    sort(aa.begin(),aa.end());
+    print(aa);
+    //降序，从大到小
+    sort(aa.begin(),aa.end(),greater<int>());
+    print(aa);
     return 0;
 }
