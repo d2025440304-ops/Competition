@@ -55,7 +55,7 @@ int main()
     struct S stu[] = {{"zhangsan",20},{"wangwu",18},{"lisi",25}};
     int sz = sizeof(stu)/sizeof(stu[0]);
     sort(stu,stu+sz,cmp_by_name);
-    sort(a.begin(),a.end(),greater<int>());
+    sort(a.begin(),a.end(),greater<int>());//greater<int>()，降序
     for(int i = 0;i<sz;i++)
     {
         cout << stu[i].name << ":" << stu[i].age << endl;

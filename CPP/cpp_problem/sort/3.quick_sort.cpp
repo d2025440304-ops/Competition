@@ -33,8 +33,25 @@ void quick_sort(int left,int right)
     quick_sort(left,l);
     quick_sort(r,right);
 }
-
-
+int get_random(int left,int right)
+{
+    int r = a[rand() % (right-left+1)+left];
+    return r;
+}
+void quick_sort(int left,int right)
+{
+    if(left >= right)   return ;
+    int p = get_random(left,right);
+    int l = left-1,i = left,r = right+1;
+    while(i < r)
+    {
+        if(a[i] > p)    swap(a[i],a[--r]);
+        else if(a[i] < p)   swap(a[i++],a[++l]);
+        else i++;
+    }
+    quick_sort(left,l);
+    quick_sort(r,right);
+}   
 int main()
 {
     ios::sync_with_stdio(false);
@@ -52,9 +69,5 @@ int main()
 
 
 
-int get_random(int left,int right)
-{
-    
 
 
-}
