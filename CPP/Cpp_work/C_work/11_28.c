@@ -16,7 +16,8 @@ int main()
     // 3. 第一次循环：读取数据并计算总和
     for(int i = 0; i < n; i++)
     {
-        if(scanf("%lld", &a[i]) != 1) {
+        if(scanf("%lld", &a[i]) != 1) 
+        {
             free(a);
             return 1;
         }

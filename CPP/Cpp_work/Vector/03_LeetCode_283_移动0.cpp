@@ -10,7 +10,7 @@
      //   [2,3,6,5,0]
 class Solution {
 public:
-    void moveZeroes(vector<int>& nums) {
+    void moveZeroes(vector<int> & nums)    {
         for(int cur = -1,i = 0;i<nums.size();i++)
         {
             if(nums[i])//非零元素
