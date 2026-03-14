@@ -4,6 +4,8 @@
 // 父节点 i/2;
 // 左子节点 i*2;
 // 右子节点 i*2+1;
+
+//大根堆
 #include <iostream>
 using namespace std;
 const int N = 1e5+10;
@@ -25,13 +27,13 @@ void up(int child)
 void down(int parent)
 {
     int child = parent*2;//左孩子
-    while(child <= n)
+    while(child <= n)//孩子的下标合法
     {
         if((child+1) <= n && heap[child+1] > heap[child] )   child ++;
-        if(heap[parent] > heap[child])  return;
+        if(heap[parent] > heap[child])  return;//证明堆已经合法，不需要调整
         swap(heap[child],heap[parent]);
-        parent = child;
-        child = parent*2;
+        parent = child;//更细父节点
+        child = parent*2;//更新子节点
     }
 }
 //插入元素
