@@ -29,6 +29,7 @@ int main()
     {
         pq.push({a[1]+b[i],1,i});
     }
+    
     for(int k = 1;k <= n;k++)
     {
         auto t = pq.top();  pq.pop();
