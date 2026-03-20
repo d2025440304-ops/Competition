@@ -135,14 +135,14 @@ using namespace std;
 //  insert (size_t ops,string  || const char *str )
 // int main()
 // {
-//     string s2("mtt");
+//     string s2("l");
 //     string s1 = "i love u";
 //     s2 += s1;
 //     s1.insert(0,s2);
 //     //插入 string 类型的字符串
 //     cout << s1 <<endl;
 //     cout << s2 <<endl;
-//     s1.insert(0,"mtt");
+//     s1.insert(0,"l");
 //     //插入 C 语言风格const char *的字符串
 //     cout << s1 << endl;
 //     s1.insert(0,2,'t');
