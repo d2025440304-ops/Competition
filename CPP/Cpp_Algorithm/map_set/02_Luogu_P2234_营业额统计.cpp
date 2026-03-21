@@ -22,7 +22,7 @@ int main()
         auto it = mp.lower_bound(x);
         auto tmp = it;
         tmp--;
-        ret += min(abs(*it-x),abs(*tmp-x));
+        ret += min(abs(*it-x),abs(*tmp-x));//求最小值 min，绝对值函数 abs
         mp.insert(x);//最后在插入，避免将 x 本身判断
     }
     cout << ret << endl;

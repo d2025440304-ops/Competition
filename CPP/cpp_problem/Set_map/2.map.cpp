@@ -56,3 +56,12 @@ int main()
     // print(mp);
     // return 0;
 }
+
+
+
+//统计单词出现的次数
+map<string,int> mp;
+void fun()
+{
+
+}
