@@ -32,6 +32,8 @@ int main()
     // a:3 2 1           sa:1 2 3
     //   0 1 2              0 1 2
     //   (la-1-i)               i
+
+    //逆序的本质是需要低位对齐
     for(int i = la-1;i>=0;i--) a[la-1-i] = sa[i]-'0';
     for(int i = lb-1;i>=0;i--) b[lb-1-i] = sb[i]-'0';
     add(c,a,b);//c = a+b
