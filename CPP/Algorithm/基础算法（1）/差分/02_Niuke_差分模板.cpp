@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 typedef long long LL;
-const int N = 1e6;
+const int N = 1e6 + 10;
 LL f[N];
 int n,m;
 int main()
@@ -9,7 +9,7 @@ int main()
     cin >> n >> m;
     for(int i = 1;i<=n;i++)
     {
-        int x;
+        int x; cin >>x;
         f[i] += x;
         f[i+1] -= x;
     }
